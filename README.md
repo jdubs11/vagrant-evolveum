@@ -25,3 +25,9 @@ Once the process completes, you can visit the Midpoint UI on your host machine a
 Default creds:
 administrator
 5ecr3t
+
+## Delete VM
+`vagrant destroy`
+
+## Suspend VM
+`vagrant halt`
