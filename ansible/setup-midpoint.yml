@@ -1,0 +1,28 @@
+- name: Setup VM
+  hosts: all
+  gather_facts: no
+  tags: ["always"]
+  tasks:
+
+    - name: Download openjdk11
+      get_url: url="https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz" dest="/home/vagrant/"
+
+    - name: Untar openjdk11
+      unarchive:
+        src: /home/vagrant/openjdk-11.0.2_linux-x64_bin.tar.gz
+        dest: /home/vagrant/openjdk11
+
+    - name: Set JAVA_HOME
+      environment:
+        JAVA_HOME: /home/vagrant/openjdk11
+
+    - name: Download evolveum midpoint
+      get_url: url="https://evolveum.com/downloads/midpoint/4.7.1/midpoint-4.7.1-dist.tar.gz" dest="/home/vagrant/"
+
+    - name: Untar evolveum midpoint
+      unarchive:
+        src: /home/vagrant/midpoint-4.7.1-dist.tar.gz
+        dest: /home/vagrant/midpoint
+
+    - name: Start midpoint server
+      command: sh /home/vagrant/midpoint/bin/start.sh
