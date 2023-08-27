@@ -14,6 +14,7 @@ Create the directory you want to work in. I usually do this in `~/Desktop/Vagran
 
 Clone this repo to that workspace. `git clone git@github.com:jdubs11/vagrant-evolveum.git`
 - Alternatively you can clone via HTTPS and use your username/password
+- `git clone https://github.com/jdubs11/vagrant-evolveum.git`
 
 Enter the newly checked out repo `cd vagrant-evolveum`
 
