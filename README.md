@@ -13,7 +13,7 @@ Open Git Bash on your Windows (host) machine. Just search for "Git Bash" in the 
 Create the directory you want to work in. I usually do this in `~/Desktop/Vagrant/`
 
 Clone this repo to that workspace. `git clone git@github.com:jdubs11/vagrant-evolveum.git`
-- Alternatively you can clone via HTTPS and use your username/password
+- Alternatively you can clone via HTTPS and use your username/password or generated code
 - `git clone https://github.com/jdubs11/vagrant-evolveum.git`
 
 Enter the newly checked out repo `cd vagrant-evolveum`
@@ -31,4 +31,7 @@ administrator
 `vagrant destroy`
 
 ## Suspend VM
-`vagrant halt`
+`vagrant suspend`
+
+## Resume VM
+`vagrant resume`
