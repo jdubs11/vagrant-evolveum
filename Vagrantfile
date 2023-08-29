@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
   # Set hostname
   config.vm.hostname = "midpoint-vm"
 
+  # Forward midpoint port to host
   config.vm.network "forwarded_port", guest: 8080, host: 8080  # midpoint
 
   # Currently "ubuntu/bionic64" on VirtualBox requires `type: "virtualbox"`
@@ -23,6 +24,7 @@ Vagrant.configure("2") do |config|
   # Install ansible
   config.vm.provision :shell, inline: "sudo apt-get install -y ansible"
 
+  # Add `vagrant` to Administrator
   config.vm.provision :shell, inline: "sudo usermod -a -G sudo vagrant"
 
   # Install openJDK 11, evolveum and start midpoint
