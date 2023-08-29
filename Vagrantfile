@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
   # Currently "ubuntu/bionic64" on VirtualBox requires `type: "virtualbox"`
   # to make synced folder works.
-  config.vm.synced_folder "..", "/home/vagrant/evolveum", type: "virtualbox"
+  config.vm.synced_folder ".", "/home/vagrant/evolveum", type: "virtualbox"
 
   # Update repositories
   config.vm.provision :shell, inline: "sudo apt update -y"
