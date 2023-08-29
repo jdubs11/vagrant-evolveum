@@ -24,8 +24,8 @@ Once the process completes, you can visit the Midpoint UI on your host machine a
 - http://localhost:8080/midpoint
 
 Default creds:
-administrator
-5ecr3t
+- username: administrator
+- password: 5ecr3t
 
 ## Delete VM
 `vagrant destroy`
