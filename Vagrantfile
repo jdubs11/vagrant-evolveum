@@ -20,9 +20,6 @@ Vagrant.configure("2") do |config|
   # Update repositories
   config.vm.provision :shell, inline: "sudo apt update -y"
 
-  # Upgrade installed packages
-  # config.vm.provision :shell, inline: "sudo apt upgrade -y"
-
   # Install ansible
   config.vm.provision :shell, inline: "sudo apt-get install -y ansible"
 
